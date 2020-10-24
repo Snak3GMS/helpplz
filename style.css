@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+
+}
+.todo {
+    height: 768px;
+    padding: 64px 0 150px 0;
+    background-color: rgb(245, 245, 245);
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+}
+.list {
+    width:470px;
+}
+.title {
+    font: 21px "Arial", sans-serif;
+    text-align: left;
+}
+.addtolist {
+    width:430px;
+    margin-left: 50px;
+}
+.listnull {
+    margin-top: 78px;
+    font: 16px "Arial", sans-serif;
+    color: grey;    
+}
+.list__item {
+    margin-top: 35px;
+    width: 470px;
+    min-height: 135px;
+    background-color: white;
+    margin-right: 20px;
+}
+.wrapper {
+    display: flex;
+    height: 18px; 
+    padding: 20px 22px;
+    border-bottom: 1px rgb(245, 245, 245) solid;
+    
+}
+.item-title {
+    font: 16px 'Arial', sans-serif;
+    line-height: 16px;
+    height: 18px;
+}
+.item-delete{
+    position: relative;
+    margin-left: 9px;
+}
+.item-delete>div {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(45deg);
+    top: 8px;
+    border-radius: 2px;
+}
+.item-delete>div:last-child {
+    transform: rotate(-45deg);
+}
+.add-wrapper {
+    width: 470px;
+    height: 550px;
+    background-color: white;
+    margin-top: 23px;
+}
+.name, .descr {
+    display: flex;
+    flex-direction: column;
+    font: 14px "Arial", sans-serif;
+    color: grey;   
+}
+.descr {
+    margin-top: 25px;
+}
+form {
+    padding: 50px 40px;
+}
+#inDescr {
+    border: 1px solid rgb(225, 225, 225);
+    background-color: rgb(245, 245, 245);
+    width: 390px;
+    height: 230px;
+    outline: none;
+    resize: none;
+}
+#inName {
+    border: 1px solid rgb(225, 225, 225);
+    background-color: rgb(245, 245, 245);
+    width: 390px;
+    height: 45px;
+    outline: none;
+}
+.button {
+    margin-top: 30px;
+    width: 224px;
+    height: 55px;
+    color: white;
+    background-color: rgb(69, 69, 255);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
