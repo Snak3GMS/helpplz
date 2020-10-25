@@ -61,6 +61,8 @@ hr {
     position: relative;
     margin-left: 9px;
     cursor: pointer;
+    width: 15px;
+    height: 20px;
 }
 .item-delete>div {
     position: absolute;
