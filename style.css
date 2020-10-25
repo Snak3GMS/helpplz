@@ -1,20 +1,21 @@
 body {
     margin: 0;
-    overflow:hidden;
+    background-color: rgb(245, 245, 245);
+    background-size: auto;
 }
 .todo {
-    height: Calc(100vh - 150px);
-    padding: 64px 0 150px 0;
-    background-color: rgb(245, 245, 245);
+    height: 100%;
+    padding: 64px 0 100px 0;
 }
 .container {
     max-width: 960px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .list {
-    width:470px;
-    
+    width:450px;
 }
 hr {
     display: none;
@@ -29,11 +30,10 @@ hr {
     text-align: left;
 }
 .addtolist {
-    width:430px;
+    width:450px;
     margin-left: 50px;
 }
 .listnull {
-    margin-top: 78px;
     font: 16px "Arial", sans-serif;
     color: grey;    
 }
@@ -46,7 +46,6 @@ hr {
 }
 .wrapper {
     display: flex;
-    height: 18px; 
     padding: 20px 22px;
     border-bottom: 1px rgb(245, 245, 245) solid;
     
@@ -54,7 +53,9 @@ hr {
 .item-title {
     font: 16px 'Arial', sans-serif;
     line-height: 16px;
-    height: 18px;
+    min-height: 18px;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 .item-delete{
     position: relative;
@@ -84,6 +85,9 @@ hr {
     flex-direction: column;
     font: 14px "Arial", sans-serif;
     color: grey;   
+}
+.descr {
+    margin-top: 30px;
 }
 .descr_todo {
     padding: 22px;
@@ -118,3 +122,19 @@ form {
     border: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1040px) {
+    .addtolist {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    .add-wrapper {
+      width: 100%;
+    }
+    #inName {
+        width: 100%;
+    }
+    #inDescr {
+        width: 100%;
+    }
+  }

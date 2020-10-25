@@ -1,4 +1,11 @@
 $(function(){
+    $("#inName").keydown(function(event){
+        if(event.keyCode == 13){
+            $('#inDescr').focus();
+            event.preventDefault();
+        }
+    });
+
     $('.button').click(function(){
         if ($('#inName').val() == '') return false;
         else {
@@ -10,8 +17,14 @@ $(function(){
     });
     $('html').on('click', '.item-delete', function(){
         $(this).parents('.list__item').remove();
-        if ($('.list__item').length == false) $('.todolist-wrapper').append('<div class="listnull">Список пуст...</div></div>')
+        if ($('.list__item').length == false) $('.todolist-wrapper').append('<div class="listnull">Список пуст...</div></div>');
     });
-    
+    $("#inDescr").keydown(function(event){
+        if (event.shiftKey && (event.keyCode == 13)) {}
+        else if(event.keyCode == 13){
+            event.preventDefault();
+            $('#btn').click();
+        }
+    });
 });
 
