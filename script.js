@@ -10,6 +10,8 @@ $(function(){
     });
     $('html').on('click', '.item-delete', function(){
         $(this).parents('.list__item').remove();
+        if ($('.list__item').length == false) $('.todolist-wrapper').append('<div class="listnull">Список пуст...</div></div>')
     });
+    
 });
 
