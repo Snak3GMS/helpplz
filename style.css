@@ -1,9 +1,9 @@
 body {
     margin: 0;
-
+    overflow:hidden;
 }
 .todo {
-    height: 768px;
+    height: Calc(100vh - 150px);
     padding: 64px 0 150px 0;
     background-color: rgb(245, 245, 245);
 }
@@ -14,6 +14,15 @@ body {
 }
 .list {
     width:470px;
+    
+}
+hr {
+    display: none;
+}
+.todolist-wrapper {
+    overflow: auto;
+    max-height: 550px;
+    margin-top: 23px;
 }
 .title {
     font: 21px "Arial", sans-serif;
@@ -29,9 +38,9 @@ body {
     color: grey;    
 }
 .list__item {
-    margin-top: 35px;
-    width: 470px;
-    min-height: 135px;
+    margin-bottom: 35px;
+    width: 100%;
+    min-height: 120px;
     background-color: white;
     margin-right: 20px;
 }
@@ -50,15 +59,16 @@ body {
 .item-delete{
     position: relative;
     margin-left: 9px;
+    cursor: pointer;
 }
 .item-delete>div {
     position: absolute;
-    width: 15px;
+    width: 11px;
     height: 2px;
-    background-color: black;
+    background-color: rgb(162, 2, 2);
     transform: rotate(45deg);
     top: 8px;
-    border-radius: 2px;
+    border-radius: 1px;
 }
 .item-delete>div:last-child {
     transform: rotate(-45deg);
@@ -75,8 +85,10 @@ body {
     font: 14px "Arial", sans-serif;
     color: grey;   
 }
-.descr {
-    margin-top: 25px;
+.descr_todo {
+    padding: 22px;
+    font: 14px "Arial", sans-serif;
+    word-wrap: break-word;
 }
 form {
     padding: 50px 40px;

@@ -1,10 +1,12 @@
 $(function(){
     $('.button').click(function(){
         $('.listnull').remove();
-        $('.list').append('<div class="list__item"><div class="wrapper"><div class="item-title">'+$('#inName').val()+'</div><button class="item-delete"><div></div><div></div></button></div><div class="descr">'+$('#inDescr').val()+'</div></div>');
+        $('.todolist-wrapper').append('<div class="list__item"><div class="wrapper"><div class="item-title">'+$('#inName').val()+'</div><a class="item-delete"><div></div><div></div></a></div><div class="descr_todo">'+$('#inDescr').val()+'</div></div>');
+        $('#inName').val('');
+        $('#inDescr').val('');
     });
-    $('.item-delete').on('click', function(){
-        $('.title').detach();
+    $('html').on('click', '.item-delete', function(){
+        $(this).parents('.list__item').remove();
     });
 });
 
