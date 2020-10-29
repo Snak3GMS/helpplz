@@ -41,7 +41,7 @@ hr {
 .list__item {
     margin-bottom: 35px;
     width: 100%;
-    min-height: 120px;
+    min-height: 60px;
     background-color: white;
     margin-right: 20px;
 }
@@ -49,7 +49,7 @@ hr {
     display: flex;
     padding: 20px 22px;
     border-bottom: 1px rgb(245, 245, 245) solid;
-    
+    position: relative;
 }
 .item-title {
     font: 16px 'Arial', sans-serif;
@@ -94,6 +94,7 @@ hr {
 }
 .descr_todo {
     padding: 22px;
+    overflow: hidden;
     font: 14px "Arial", sans-serif;
     word-wrap: break-word;
 }
@@ -124,6 +125,18 @@ form {
     outline: none;
     border: none;
     cursor: pointer;
+}
+.off {
+    width: 6px;
+    height: 23px;
+    background-color: black;
+    transform-origin: 50% 13%;
+    transform: perspective(1px) rotatex(-10deg);
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    cursor: pointer;
+    transition: 0.05s all ease-out;
 }
 
 @media screen and (max-width: 1040px) {
