@@ -1,8 +1,11 @@
 function setListItem(key,item){
     $('.listnull').remove();
+    if (item == '') {$('.todolist-wrapper').append('<div class="list__item" style="display: none;"><div class="wrapper"><div class="item-title">'+key+'</div><a class="item-delete"><div></div><div></div></a></div></div>');} else
     $('.todolist-wrapper').append('<div class="list__item" style="display: none;"><div class="wrapper"><div class="item-title">'+key+'</div><a class="item-delete"><div></div><div></div></a><div class="off"></div></div><div class="descr_todo">'+item+'</div></div>');
     $('.list__item').fadeIn();
 }
+
+
 $(function(){
     for (let i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
@@ -30,7 +33,8 @@ $(function(){
         localStorage.removeItem($(this).parents('.list__item').find('.item-title').html());
         $(this).parents('.list__item').fadeOut(400, function(){$(this).remove();});
         function go(){
-        if ($('.list__item').length == false) $('.todolist-wrapper').append('<div class="listnull">Список пуст...</div></div>');}
+            if ($('.list__item').length == false) $('.todolist-wrapper').append('<div class="listnull">Список пуст...</div></div>');
+        }
         setTimeout (go, 500);
     });
     $('#inDescr').keydown(function(event){
@@ -41,6 +45,7 @@ $(function(){
         }
     });
     $('html').on('click', '.off', function(){
+        if ($(this).parents('.list__item').find('.descr_todo').text() == '') {} else
         if ($(this).parents('.list__item').find('.descr_todo').css('display') == 'none') {
             $(this).parents('.list__item').find('.descr_todo').fadeIn(0, function(){
                 $(this).animate({
@@ -49,13 +54,13 @@ $(function(){
                     'font-size': '14px'
                 },200);
             });
-            $(this).parents('.list__item').find('.off').css({'transform': 'perspective(1px) rotatex(-10deg)', 'top': '30px', 'right': '25px'})}
+            $(this).parents('.list__item').find('.off').css({'transform': 'perspective(1px) rotatex(-13deg)', 'top': '31px', 'right': '23px'})}
         else {
             $(this).parents('.list__item').find('.descr_todo').animate({
                 height: '0',
                 padding: '0 25px 0 25px'
             },200,function () {$(this).css('font-size', '0')}).fadeOut(100);
-            $(this).parents('.list__item').find('.off').css({'transform': 'perspective(1px) rotateZ(90deg) rotatex(-10deg)', 'top': '28px', 'right': '27px'})
+            $(this).parents('.list__item').find('.off').css({'transform': 'perspective(1px) rotateZ(90deg) rotatex(-13deg)', 'top': '28px', 'right': '27px'})
         }
     });
 });

@@ -93,10 +93,11 @@ hr {
     margin-top: 30px;
 }
 .descr_todo {
-    padding: 22px;
+    padding: 0 25px 0 25px;
     overflow: hidden;
-    font: 14px "Arial", sans-serif;
+    font: 0px "Arial", sans-serif;
     word-wrap: break-word;
+    display: none;
 }
 form {
     padding: 50px 40px;
@@ -131,12 +132,15 @@ form {
     height: 23px;
     background-color: black;
     transform-origin: 50% 13%;
-    transform: perspective(1px) rotatex(-10deg);
+    transform: perspective(1px) rotateZ(90deg) rotatex(-13deg);
+    top: 28px;
+    right: 27px;
     position: absolute;
-    right: 25px;
-    top: 30px;
     cursor: pointer;
     transition: 0.04s all;
+}
+.paddingIsNull {
+    padding: 0;
 }
 
 @media screen and (max-width: 1040px) {
