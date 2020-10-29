@@ -34,7 +34,7 @@ $(function(){
         setTimeout (go, 500);
     });
     $('#inDescr').keydown(function(event){
-        if (event.shiftKey && (event.keyCode == 13)) {}
+        if (event.shiftKey && (event.keyCode == 13)) { $(this).val($(this).val()+'<br>') ;}
         else if(event.keyCode == 13){
             event.preventDefault();
             $('#btn').click();
