@@ -41,20 +41,21 @@ $(function(){
         }
     });
     $('html').on('click', '.off', function(){
-        if ($(this).parents('.list__item').find('.descr_todo').css('display') == 'none') {$(this).parents('.list__item').find('.descr_todo').fadeIn(0, function(){
-            $(this).animate({
-                height: '100%',
-                padding: '25px',
-                'font-size': '14px'
+        if ($(this).parents('.list__item').find('.descr_todo').css('display') == 'none') {
+            $(this).parents('.list__item').find('.descr_todo').fadeIn(0, function(){
+                $(this).animate({
+                    height: '100%',
+                    padding: '25px',
+                    'font-size': '14px'
+                },200);
             });
-        });
-        $(this).parents('.list__item').find('.off').css({'transform': 'perspective(1px) rotatex(-10deg)', 'top': '30px'})}
+            $(this).parents('.list__item').find('.off').css({'transform': 'perspective(1px) rotatex(-10deg)', 'top': '30px', 'right': '25px'})}
         else {
             $(this).parents('.list__item').find('.descr_todo').animate({
                 height: '0',
                 padding: '0 25px 0 25px'
-            },function () {$(this).css('font-size', '0')}).fadeOut(100);
-            $(this).parents('.list__item').find('.off').css({'transform': 'perspective(1px) rotateZ(90deg) rotatex(-10deg)', 'top': '28px'})
+            },200,function () {$(this).css('font-size', '0')}).fadeOut(100);
+            $(this).parents('.list__item').find('.off').css({'transform': 'perspective(1px) rotateZ(90deg) rotatex(-10deg)', 'top': '28px', 'right': '27px'})
         }
     });
 });

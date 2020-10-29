@@ -136,7 +136,7 @@ form {
     right: 25px;
     top: 30px;
     cursor: pointer;
-    transition: 0.05s all ease-out;
+    transition: 0.04s all;
 }
 
 @media screen and (max-width: 1040px) {
