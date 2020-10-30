@@ -1,5 +1,6 @@
 * {
-border-radius: 0;
+    border-radius: 0;
+    font: "Arial", sans-serif;
 }
 body {
     margin: 0;
