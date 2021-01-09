@@ -20,19 +20,17 @@ function getDoList() {
         }
         list.append(elementList);
     });
-    
     deleteElement();    
     localStorage.setItem('1', JSON.stringify(toDoList));
 }
  // Добавление задачи на лист по нажатию
 function addToListOnEnter(e) {
     if(e.keyCode == 13){
-        console.log(e.keyCode)
+        console.log(e.keyCode);
         e.preventDefault();
         submit();
     }
 }
-
 nameDo.addEventListener('keydown', addToListOnEnter);
 descrDo.addEventListener('keydown', addToListOnEnter);
 
