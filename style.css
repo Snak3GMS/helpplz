@@ -161,3 +161,15 @@ form {
         width: 100%;
     }
   }
+@media screen and (max-width: 769px) {
+    .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:90%;
+}
+    .addtolist {
+        width: 100%;
+  }
