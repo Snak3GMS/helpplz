@@ -11,7 +11,7 @@ addEventListener('DOMContentLoaded', () => {
  // Формирование списка задач на странице из созданного массива объектов
 function getDoList() {
     list.innerHTML='';
-    toDoList.forEach((element, i) => {
+    toDoList.forEach((element) => {
         const elementList = document.createElement('div');
         elementList.classList.add('list__item');
         elementList.innerHTML = `<div class="wrapper"><div class="item-title">${element.name}</div><a class="item-delete"><div></div><div></div></a></div>`;
