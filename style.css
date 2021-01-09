@@ -173,4 +173,7 @@ form {
     .addtolist {
         width: 100%;
   }
+    .list {
+        width: 100%;
+    }
 }
