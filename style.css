@@ -57,7 +57,7 @@ hr {
 }
 .item-title {
     font: 16px 'Arial', sans-serif;
-    line-height: 16px;
+    line-height: 20px;
     min-height: 18px;
     word-wrap: break-word;
     overflow: hidden;
