@@ -41,6 +41,7 @@ hr {
     overflow: auto;
     max-height: 550px;
     margin-top: 23px;
+    margin-right: 20px;
 }
 .title {
     font: 21px "Arial", sans-serif;
@@ -59,7 +60,6 @@ hr {
     width: 100%;
     min-height: 60px;
     background-color: white;
-    margin-right: 20px;
 }
 .list__item:last-child {
     margin-bottom: 0;
@@ -175,19 +175,25 @@ form {
     #inDescr {
         width: 100%;
     }
+    .todolist-wrapper {
+        margin-right: 0px;
+    }
   }
 @media screen and (max-width: 769px) {
     .container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    justify-content: center;
-    width:90%;
-}
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:90%;
+    }
     .addtolist {
         width: 100%;
-  }
+    }
+    .todolist-wrapper {
+        margin-right: 0px;
+    }
     .list {
         width: 100%;
     }
